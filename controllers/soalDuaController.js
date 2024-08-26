@@ -1,14 +1,14 @@
 exports.celcius = (req, res) => {
-    // Mengambil nilai fahrenheit dari parameter
+    // Mengambil nilai celcius dari parameter atau body
     let celcius = parseFloat(req.params.celcius);
 
     // Membuat objek response dengan hasil konversi
     let response = {
         celcius: celcius,
         result: {
-            reamur: (4 * celcius / 5).toFixed,
-            fahrenheit: ((9 * celcius / 5) + 32).toFixed,
-            kelvin: (celcius + 273.15).toFixed,
+            reamur: (4 * celcius / 5).toFixed(2),
+            fahrenheit: ((9 * celcius / 5) + 32).toFixed(2),
+            kelvin: (celcius + 273.15).toFixed(2),
         }
     };
 
